@@ -1,0 +1,111 @@
+
+.stack-alert {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    max-width: 70%;
+    animation: newmsg 0.2s ease;
+    transition: all 0.2s;
+}
+.stack-alert.closed {
+    opacity: 0;
+}
+.stack-alert .alert {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.2s;
+    box-shadow: 0px 0px 20px -10px rgba(0, 0, 0, 0.4);
+
+}
+.stack-alert.wiggle {
+    animation: forbidden 0.7s;
+}
+.stack-alert-content {
+    margin-right: 50px;
+}
+.stack-alert-close {
+    cursor: pointer;
+    margin-left: 20px;
+}
+.stack-alert-prompt {
+    margin-left: 40px;
+    text-align: right;
+}
+.stack-alert-prompt .btn {
+    padding: 8px 20px;
+}
+.stack-alert-prompt .btn:first-child, .stack-alert-prompt .btn:first-child:hover {
+    color: #fff;
+    margin-right: 8px;
+}
+.flashmsg {
+    display: none;
+    animation: delaishow 0s 0.2s;
+}
+@keyframes delaishow {
+    from {display: none;}
+    to {display: block;}
+}
+@keyframes newmsg {
+    from {
+        transform: translateY(160%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes forbidden {
+    10% {
+        -webkit-transform: translateX(3px) rotate(2deg);
+        transform: translateX(3px) rotate(2deg);
+    }
+
+    20% {
+        -webkit-transform: translateX(-3px) rotate(-2deg);
+        transform: translateX(-3px) rotate(-2deg);
+    }
+
+    30% {
+        -webkit-transform: translateX(3px) rotate(2deg);
+        transform: translateX(3px) rotate(2deg);
+    }
+
+    40% {
+        -webkit-transform: translateX(-3px) rotate(-2deg);
+        transform: translateX(-3px) rotate(-2deg);
+    }
+
+    50% {
+        -webkit-transform: translateX(2px) rotate(1deg);
+        transform: translateX(2px) rotate(1deg);
+    }
+
+    60% {
+        -webkit-transform: translateX(-2px) rotate(-1deg);
+        transform: translateX(-2px) rotate(-1deg);
+    }
+
+    70% {
+        -webkit-transform: translateX(2px) rotate(1deg);
+        transform: translateX(2px) rotate(1deg);
+    }
+
+    80% {
+        -webkit-transform: translateX(-2px) rotate(-1deg);
+        transform: translateX(-2px) rotate(-1deg);
+    }
+
+    90% {
+        -webkit-transform: translateX(1px) rotate(0);
+        transform: translateX(1px) rotate(0);
+    }
+
+    100% {
+        -webkit-transform: translateX(-1px) rotate(0);
+        transform: translateX(-1px) rotate(0);
+    }
+}
