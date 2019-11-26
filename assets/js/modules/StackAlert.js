@@ -7,7 +7,7 @@ class StackAlert {
             ${message}
         </div>`
     if (closable) {
-      content += `<
+      content += `
         <div class="stack-alert-close">
             <i class="fas fa-times"></i>
         </div>`
