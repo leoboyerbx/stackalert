@@ -1,7 +1,7 @@
 class StackAlert {
   constructor (message, type = 'light', expiration = null, closable = true, stackable = true) {
     const element = document.createElement('div')
-    element.classList.add('stack-alert')
+    element.classList.add('stack-alert', 'appear')
     let content = `<div class="alert alert-${type}">
         <div class="stack-alert-content">
             ${message}
@@ -74,6 +74,7 @@ class StackAlert {
 
   wiggle () {
     this.element.classList.add('wiggle')
+    this.element.classList.remove('appear')
     setTimeout(() => {
       this.element.classList.remove('wiggle')
     }, 1000)
